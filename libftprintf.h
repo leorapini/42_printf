@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:54:49 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/04/30 17:13:34 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/04/30 19:16:02 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 
 char	*ft_utoa(unsigned int n);
-char	*ft_itoh(long int n, int cap);
+char	*ft_itoh(uintptr_t n, int cap);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);

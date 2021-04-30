@@ -6,13 +6,13 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 17:20:53 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/04/30 17:49:13 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/04/30 19:14:00 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static size_t	ft_getlen_itoh(long int num, int sign)
+static size_t	ft_getlen_itoh(uintptr_t num, int sign)
 {
 	size_t	length;
 
@@ -29,11 +29,11 @@ static size_t	ft_getlen_itoh(long int num, int sign)
 	return (length);
 }
 
-char	*ft_itoh(long int n, int cap)
+char	*ft_itoh(uintptr_t n, int cap)
 {
 	char		*buffer;
 	int			len;
-	long int	new_n;
+	uintptr_t	new_n;
 
 	len = ft_getlen_itoh(n, 1);
 	buffer = (char *)malloc(sizeof(char) * len + 1);

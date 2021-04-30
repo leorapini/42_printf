@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:11:22 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/04/30 15:59:05 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/04/30 19:15:35 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@
 int	main(void)
 {
 
-	int a;
-	int b;
+	//int a;
+	//int b;
 
-	a = printf("printf  %%0*i     : |%0*i|\n", 7, -54);
-	b = ft_printf("ft_printf        : |%0*i|\n", 7, -54);
-	printf("a: %d b: %d\n\n", a, b); 
+	int num1 = 5;
+	int num2 = 5;
 
+	ft_printf("%p, %x, %p, %x, %p, %x, %p, %x\n", num1, num2);
+
+	/*
 	a = printf("printf  %%*s     : |%*s|\n", -32, "abc");
 	b = ft_printf("ft_printf       : |%*s|\n", -32, "abc");
 	printf("a: %d b: %d\n\n", a, b); 
@@ -652,6 +654,6 @@ int	main(void)
 	a = printf("printf  %%9s   : |%9s|\n", "hello");
 	b = ft_printf("ft_printf     : |%9s|\n", "hello");
 	printf("a: %d b: %d\n\n", a, b); 
-
+	*/
 	return (0);
 }

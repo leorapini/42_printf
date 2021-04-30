@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 17:25:38 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/04/29 17:01:32 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/04/30 19:13:32 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	ft_printf_p(int inverted, int width, int precision, va_list args)
 	ptr = va_arg(args, void *);
 	if (ptr == NULL)
 		return (p_exceptions(inverted, width, precision, 1));
-	num = (long int) ptr;
+	num = (uintptr_t) ptr;
 	hex = ft_itoh(num, 0);
 	return (print_p(inverted, width, precision, hex));
 }
