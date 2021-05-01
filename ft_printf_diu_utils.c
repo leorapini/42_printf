@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 18:18:20 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/01 15:36:15 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/01 16:29:12 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ int	check_neg_val(int num, int *neg, int *width)
 	{
 		num = -1 * num;
 		if (num >= 0)
+		{
 			*neg = 1;
-		*width = t_width - 1;
+			*width = t_width - 1;
+		}
 	}
 	return (num);
 }

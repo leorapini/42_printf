@@ -6,11 +6,12 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:10:40 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/01 15:35:01 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/01 16:28:19 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 static int	print_wd_pr_num(int inverted, int width, int precision, int num)
 {
@@ -21,7 +22,9 @@ static int	print_wd_pr_num(int inverted, int width, int precision, int num)
 
 	l_counter = 0;
 	neg = 0;
+	//printf("\nNEG %d  WIDTH %d\n", neg, width);
 	num = check_neg_val(num, &neg, &width);
+	//printf("\nNEG %d  WIDTH %d\n", neg, width);
 	num_str = ft_itoa(num);
 	strlen = ft_strlen(num_str);
 	if (strlen > precision)
@@ -108,6 +111,7 @@ int	ft_printf_d_i(int inverted, int width, int precision, va_list args)
 
 	num = va_arg(args, int);
 	counter = 0;
+	//printf("INVERTED %d  WIDTH %d  PRECISION %d  NUM %d\n", inverted, width, precision, num);
 	if (precision == 0 && num == 0 && width != 0)
 	{
 		if (width < 0)
@@ -127,5 +131,6 @@ int	ft_printf_d_i(int inverted, int width, int precision, va_list args)
 		else if (precision < 0 && num >= 0)
 			precision = width * -1;
 	}
+	//printf("INVERTED %d  WIDTH %d  PRECISION %d  NUM %d\n", inverted, width, precision, num);
 	return (d_i_route(inverted, width, precision, num));
 }
