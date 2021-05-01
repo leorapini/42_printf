@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 17:25:38 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/04/29 15:12:42 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/01 11:21:13 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	ft_printf_xcap(int inverted, int width, int precision, va_list args)
 {
 	long int	num;
 
-	num = va_arg(args, long int);
+	num = va_arg(args, int);
 	if (width < 0)
 	{
 		if (precision >= 0)
