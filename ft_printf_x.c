@@ -6,14 +6,14 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 17:25:38 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/01 11:20:58 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/01 11:55:14 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 #include <stdio.h>
 
-static int	print_x(int precision, int strlen, long int num, char *hex)
+static int	print_x(int precision, int strlen, unsigned int num, char *hex)
 {
 	int	l_counter;
 	int	orig_precision;
@@ -28,7 +28,7 @@ static int	print_x(int precision, int strlen, long int num, char *hex)
 	return (l_counter);
 }
 
-static int	print_route(int inverted, int precision, int width, long int num)
+static int	print_route(int inverted, int precision, int width, unsigned int num)
 {
 	int		r_counter;
 	char	*hex;
@@ -57,7 +57,7 @@ int	ft_printf_x(int inverted, int width, int precision, va_list args)
 {
 	long int	num;
 
-	num = va_arg(args, int);
+	num = va_arg(args, unsigned int);
 	if (width < 0)
 	{
 		if (precision >= 0)
