@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:11:22 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/04/30 19:15:35 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/01 11:00:16 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,27 @@ int	main(void)
 	//int a;
 	//int b;
 
-	int num1 = 5;
-	int num2 = 5;
+	//int num1 = 4;
+	//int num2 = 0;
 
-	ft_printf("%p, %x, %p, %x, %p, %x, %p, %x\n", num1, num2);
+	ft_printf("%--150.*d%01.172i%--151.122d%--*.110x%--23.182%" ,193,-1523409169,453642614,881460015,68,2920216226u);
+	printf("\n");
+	printf("%--150.*d%01.172i%--151.122d%--*.110x%--23.182%" ,193,-1523409169,453642614,881460015,68,2920216226u);
+	printf("\n");
 
+	/*
+	printf("ultimate4 %*.*x %*.*X\n", 1, 50, 5000, 1, 0, 10);
+	ft_printf("ultimate4 %*.*x %*.*X\n", 1, 50, 5000, 1, 0, 10);
+
+	CRAZY TEST
+	printf("|%0*.*x|\n", num2, num1, num2);
+	ft_printf("|%0*.*x|\n", num2, num1, num2);
+
+	printf("%0*.*u, %0*.*x, %0*.*X, %0*.*u\n", num1, num2, num1, num2,
+		num1, num2, num1, num2, num1, num2, num1, num2);
+	ft_printf("%0*.*u, %0*.*x, %0*.*X, %0*.*u\n", num1, num2, num1, num2,
+		num1, num2, num1, num2, num1, num2, num1, num2);	
+	*/
 	/*
 	a = printf("printf  %%*s     : |%*s|\n", -32, "abc");
 	b = ft_printf("ft_printf       : |%*s|\n", -32, "abc");
