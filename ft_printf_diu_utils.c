@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 18:18:20 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/04/26 11:58:57 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/01 15:36:15 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,19 @@ int	print_pres_d_i_u(int precision, int strlen, int neg, char *num_str)
 		l_counter += ft_putchar('0');
 	l_counter += ft_putstr_limit(num_str, 0);
 	return (l_counter);
+}
+
+int	check_neg_val(int num, int *neg, int *width)
+{
+	int	t_width;
+
+	t_width = *width;
+	if (num < 0)
+	{
+		num = -1 * num;
+		if (num >= 0)
+			*neg = 1;
+		*width = t_width - 1;
+	}
+	return (num);
 }

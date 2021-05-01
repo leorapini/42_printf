@@ -32,6 +32,7 @@ int		get_precision(char *cpypointer, va_list args);
 int		get_width(char *cpypointer, va_list args, int *inverted);
 int		get_inverted(char *cpypointer);
 int		print_pres_d_i_u(int precision, int strlen, int neg, char *num_str);
+int		check_neg_val(int num, int *neg, int *width);
 int		ft_printf_s(int inverted, int width, int precision, va_list args);
 int		ft_printf_c(int inverted, int width, va_list args);
 int		ft_printf_d_i(int inverted, int width, int precision, va_list args);

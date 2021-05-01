@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:11:22 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/01 14:27:13 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/01 15:02:46 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@
 int	main(void)
 {
 
-	//int a;
-	//int b;
+	int a;
+	int b;
 
-	//int num1 = -4;
-	//int num2 = 0;
+	int num1 = -4;
+	int num2 = 0;
 	
 	//int		a = -4;
-	int		b = 0;
+	int		bb = 0;
 	//char		c = 'a';
 	//int		d = 2147483647;
-	//int		e = -2147483648;
+	int		e = -2147483648;
 	//int		f = 42;
 	//int		g = 25;
 	//int		h = 4200;
@@ -45,54 +45,61 @@ int	main(void)
 	//char	*t = "0x12345678";
 	//char	*u = "-0";
 
-	 printf("|%0*.*d|\n", 1, 0, b);
-	 ft_printf("|%0*.*d|\n", 1, 0, b);
 
+	printf("\n");
+	printf("\033[0;35m");
+	printf("RANDOM TESTS\n");
+	printf("\033[0m");
+	printf("\n");
+	printf("|%0*.*d|\n", 1, 0, bb);
+	ft_printf("|%0*.*d|\n", 1, 0, bb);
+	printf("\n");
 
-	//printf("|%.1d|\n", e);
-	//ft_printf("|%.1d|\n", e);
+	printf("|%.1d|\n", e);
+	ft_printf("|%.1d|\n", e);
+	printf("\n");
 	
-	//printf("|%*.*d|\n", -2, 1, e);
-	//ft_printf("|%*.*d|\n", -2, 1, e);
+	printf("|%*.*d|\n", -2, 1, e);
+	ft_printf("|%*.*d|\n", -2, 1, e);
+	printf("\n");
 	
-	/*	
 	printf("|%00*.32%|\n", -125);
 	ft_printf("|%00*.32%|\n", -125);
-	*/
+	printf("\n");
 
-	//printf("|%-102p%-91p%00*.32%|" ,(void*)17383623580121946936lu,(void*)6825043625903153404lu,-125);
-	//printf("\n");
-	//ft_printf("|%-102p%-91p%00*.32%|" ,(void*)17383623580121946936lu,(void*)6825043625903153404lu,-125);
-	//printf("\n");
+	printf("|%-102p%-91p%00*.32%|" ,(void*)17383623580121946936lu,(void*)6825043625903153404lu,-125);
+	printf("\n");
+	ft_printf("|%-102p%-91p%00*.32%|" ,(void*)17383623580121946936lu,(void*)6825043625903153404lu,-125);
+	printf("\n");
+	printf("\n");
 
-	//printf("%*x %*X\n", 10, 54, 1, 300);	
-	//ft_printf("%*x %*X\n", 10, 54, 1, 300);	
-	//printf("\n");
-	/*
+	printf("%*x %*X\n", 10, 54, 1, 300);	
+	ft_printf("%*x %*X\n", 10, 54, 1, 300);	
+	printf("\n");
+	
 	printf("ultimate2 %*d %*s %*x %*X %*i %*u\n", 1, 50, 1, "hey", 10, 54, 1, 300, 10, -55, 1, -60);
 	ft_printf("ultimate2 %*d %*s %*x %*X %*i %*u\n", 1, 50, 1, "hey", 10, 54, 1, 300, 10, -55, 1, -60);
+	printf("\n");
 
-	*/
-
-	/*
 	ft_printf("%--150.*d%01.172i%--151.122d%--*.110x%--23.182%" ,193,-1523409169,453642614,881460015,68,2920216226u);
 	printf("\n");
 	printf("%--150.*d%01.172i%--151.122d%--*.110x%--23.182%" ,193,-1523409169,453642614,881460015,68,2920216226u);
 	printf("\n");
+	printf("\n");
 
 	printf("ultimate4 %*.*x %*.*X\n", 1, 50, 5000, 1, 0, 10);
 	ft_printf("ultimate4 %*.*x %*.*X\n", 1, 50, 5000, 1, 0, 10);
+	printf("\n");
 
-	CRAZY TEST
 	printf("|%0*.*x|\n", num2, num1, num2);
 	ft_printf("|%0*.*x|\n", num2, num1, num2);
+	printf("\n");
 
 	printf("%0*.*u, %0*.*x, %0*.*X, %0*.*u\n", num1, num2, num1, num2,
 		num1, num2, num1, num2, num1, num2, num1, num2);
 	ft_printf("%0*.*u, %0*.*x, %0*.*X, %0*.*u\n", num1, num2, num1, num2,
 		num1, num2, num1, num2, num1, num2, num1, num2);	
-	*/
-	/*
+	
 	a = printf("printf  %%*s     : |%*s|\n", -32, "abc");
 	b = ft_printf("ft_printf       : |%*s|\n", -32, "abc");
 	printf("a: %d b: %d\n\n", a, b); 
@@ -106,13 +113,13 @@ int	main(void)
 	printf("a: %d b: %d\n\n", a, b); 
 
 	a = printf("printf  %%0*i     : |%0*i|\n", -7, -54);
-	b = ft_printf("ft_printf         : |%0*i|\n", -7, -54);
+	b = ft_printf("ft_printf        : |%0*i|\n", -7, -54);
 	printf("a: %d b: %d\n\n", a, b); 
 
 
 	printf("\n");
 	printf("\033[0;35m");
-	printf("x\n");
+	printf("x TESTES\n");
 	printf("\033[0m");
 	
 	a = printf("printf  %%x     : |%x|\n", 1235);
@@ -139,11 +146,6 @@ int	main(void)
 	b = ft_printf("ft_printf         : |%5.8x|\n", 34);
 	printf("a: %d b: %d\n\n", a, b); 
 
-	printf("\n");
-	printf("\033[0;35m");
-	printf("x\n");
-	printf("\033[0m");
-	
 	a = printf("printf  %%x     : |%x|\n", 1235);
 	b = ft_printf("ft_printf      : |%x|\n", 1235);
 	printf("a: %d b: %d\n\n", a, b); 
@@ -721,6 +723,6 @@ int	main(void)
 	a = printf("printf  %%9s   : |%9s|\n", "hello");
 	b = ft_printf("ft_printf     : |%9s|\n", "hello");
 	printf("a: %d b: %d\n\n", a, b); 
-	*/
+	
 	return (0);
 }
