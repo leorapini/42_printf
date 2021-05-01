@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:10:40 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/04/30 11:15:12 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/01 10:16:51 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	ft_printf_u(int inverted, int width, int precision, va_list args)
 		return (0);
 	if (width < 0)
 	{
-		if (precision > 0)
+		if (precision >= 0)
 			width = width * -1;
 		else if (precision < 0)
 		{
