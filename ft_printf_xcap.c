@@ -27,7 +27,7 @@ static int	print_x(int precision, int strlen, unsigned int num, char *hex)
 	return (l_counter);
 }
 
-static int	print_route(int inverted, int precision, int width, unsigned int num)
+static int	x_route(int inverted, int precision, int width, unsigned int num)
 {
 	int		r_counter;
 	char	*hex;
@@ -64,5 +64,5 @@ int	ft_printf_xcap(int inverted, int width, int precision, va_list args)
 		else
 			precision = -1 * width;
 	}
-	return (print_route(inverted, precision, width, num));
+	return (x_route(inverted, precision, width, num));
 }

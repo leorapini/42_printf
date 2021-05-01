@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:10:40 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/01 10:16:32 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/01 14:30:39 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ static int	print_wd_pr_num(int inverted, int width, int precision, int num)
 	if (num < 0)
 	{
 		num = -1 * num;
-		neg = 1;
+		if (num >= 0)
+			neg = 1;
 		width--;
 	}
 	num_str = ft_itoa(num);
@@ -56,8 +57,10 @@ static int	print_pres_num(int precision, int strlen, int num)
 	}
 	else
 	{
-		num_str = ft_itoa(-1 * num);
-		l_counter += ft_putchar('-');
+		num = -1 * num;
+		num_str = ft_itoa(num);
+		if (num >= 0)
+			l_counter += ft_putchar('-');
 		while ((precision--) - (strlen - 1) > 0)
 			l_counter += ft_putchar('0');
 		l_counter += ft_putstr_limit(num_str, 0);
@@ -111,8 +114,10 @@ int	ft_printf_d_i(int inverted, int width, int precision, va_list args)
 
 	num = va_arg(args, int);
 	counter = 0;
-	if (precision == 0 && num == 0 && width > 0)
+	if (precision == 0 && num == 0 && width != 0)
 	{
+		if (width < 0)
+			width = -1 * width;
 		while ((width--) > 0)
 			counter += ft_putchar(' ');
 		return (counter);

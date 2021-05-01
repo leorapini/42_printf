@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:10:40 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/01 10:53:48 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/01 14:33:36 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,10 @@ int	ft_printf_u(int inverted, int width, int precision, va_list args)
 
 	num = va_arg(args, unsigned int);
 	counter = 0;
-	if (precision == 0 && num == 0 && width > 0)
+	if (precision == 0 && num == 0 && width != 0)
 	{
+		if (width < 0)
+			width = -1 * width;
 		while ((width--) > 0)
 			counter += ft_putchar(' ');
 		return (counter);
