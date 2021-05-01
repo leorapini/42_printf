@@ -6,7 +6,7 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/24 23:34:42 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/04/28 17:48:04 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/01 13:15:21 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	get_width(char *cpypointer, va_list args, int *inverted)
 				cpypointer++;
 				if (*cpypointer == '*')
 					return (get_num_zero(args, &inverted));
-				else if (ft_isdigit(*cpypointer))
+				else if (ft_isdigit(*cpypointer) && *cpypointer != '0')
 					return (-1 * ft_atoi(cpypointer));
 				cpypointer--;
 			}
