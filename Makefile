@@ -6,7 +6,7 @@
 #    By: lpinheir <lpinheir@student.42sp.org.b      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/23 14:35:39 by lpinheir          #+#    #+#              #
-#    Updated: 2021/05/18 17:52:59 by lpinheir         ###   ########.fr        #
+#    Updated: 2021/05/21 10:09:22 by lpinheir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ CC_FLAGS = -Wall -Wextra -Werror
 AR_FLAGS = -rcs
 RM_FLAGS = -f
 
-S_DIR = ./
+CC = gcc
+
+S_DIR = srcs
 SRC = 	$(S_DIR)/ft_printf.c		\
 	$(S_DIR)/ft_printf_c.c		\
 	$(S_DIR)/ft_printf_d_i.c	\
@@ -36,7 +38,7 @@ SRC = 	$(S_DIR)/ft_printf.c		\
 	$(S_DIR)/ft_strings.c	\
 
 
-O_DIR = ./
+O_DIR = objs
 OBJ = $(patsubst $(S_DIR)/%.c, $(O_DIR)/%.o, $(SRC)) 
 
 all:	$(NAME)
@@ -45,7 +47,7 @@ $(NAME):	$(OBJ)
 	ar $(AR_FLAGS) $@ $^	
 
 $(O_DIR)/%.o:	$(S_DIR)/%.c
-	gcc	$(C_FLAGS) -c $< -o $@
+	$(CC)	$(C_FLAGS) -I includes -c $< -o $@
 
 
 re:	fclean all
