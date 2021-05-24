@@ -6,12 +6,11 @@
 /*   By: lpinheir <lpinheir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:10:40 by lpinheir          #+#    #+#             */
-/*   Updated: 2021/05/01 16:38:33 by lpinheir         ###   ########.fr       */
+/*   Updated: 2021/05/24 18:35:58 by lpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 static int	print_wd_pr_num(int inverted, int width, int precision, int num)
 {
